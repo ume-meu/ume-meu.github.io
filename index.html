@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Well-styled Website Structure</title>
+</head>
+
+<body class="light-mode container">
+  <nav class="navbar navbar-expand-lg border-bottom mobile-navbar">
+    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between">
+      <!-- Logo & Name -->
+      <div
+        class="d-flex flex-column flex-lg-row text-lg-start cursor-pointer navbar-brand fw-bold text-center align-items-center">
+        <img src="/ex4_Bootstrap/resources/chihiro.png" width="40px" alt="Logo" class="logo-image mb-2" />
+        <div class="nav-title">Chihiro</div>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="navbar-nav flex-row justify-content-center">
+        <li class="nav-item"><a class="nav-link mx-2" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link mx-2" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link mx-2" href="#articles">Articles</a></li>
+        <li class="nav-item"><a class="nav-link mx-2" href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Theme Toggle Button -->
+      <div class="theme-btn">
+        <button class="btn btn-sm border p-2 mx-4 rounded-circle mode" onclick="toggleDarkMode()">
+          🌑
+        </button>
+      </div>
+
+  </nav>
+
+  <section class="container text-center my-5">
+    <h1 class="fw-bold text-indie-flower">Frontend Developer</h1>
+  </section>
+
+  <section class="container">
+    <div class="row">
+      <!-- Projects -->
+      <div class="col-md-3 border p-4">
+        <h3 class="text-center text-indie-flower">Projects</h3>
+        <ul class="list-unstyled projects">
+          <li class="border-bottom"><a href="#portfolio">HTML Only Portfolio</a></li>
+          <li class="border-bottom"><a href="#calculator">Calculator</a></li>
+          <li class="border-bottom"><a href="#quiz">Quiz App</a></li>
+          <li class="border-bottom"><a href="#timer">Countdown Timer</a></li>
+          <li class="border-bottom"><a href="#product">Product Upcoming Page</a></li>
+        </ul>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="col-md-5 border p-4">
+        <h3 class="text-center text-indie-flower">Work Experience</h3>
+        <div class="roadmap work border-bottom">
+          <div class="work-title text-indie-flower">roadmap.sh</div>
+          <p>Solved all the frontend projects</p>
+          <a href="#profile" target="_blank" class="profile-link">Visit my Profile</a>
+        </div>
+        <div class="opensource work border-bottom">
+          <div class="work-title text-indie-flower">OpenSource Work</div>
+          <p>
+            Contributed to 50 open-source projects. Made my ơn projects with
+            200 Github Stars.
+          </p>
+          <a href="#profile" target="_blank" class="profile-link">Visit my Github Profile</a>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="col-md-4 border p-4">
+        <h3 class="text-center text-indie-flower">Education</h3>
+        <div class="education-content">
+          <div class="achievements">
+            <p>
+              Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized
+              30 sessions
+            </p>
+          </div>
+          <div class="education">
+            <p>Courses I took:</p>
+            <div class="courses">
+              <ul style="list-style-type: square">
+                <li>Object Oriented Programming</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Web Engineering</li>
+                <li>Artificial Intelligence</li>
+                <li>Human Computer Interaction</li>
+                <li>Computer Graphics</li>
+                <li>Database Management Systems</li>
+                <li>Distributed Database Systems</li>
+                <li>Discreet Mathematics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h3 class="text-center text-indie-flower">Reviews from my Teachers</h3>
+    <div class="reviews-content d-flex overflow-auto gap-5">
+      <div class="review p-3 border rounded">
+        <p>
+          John Doe was a brilliant student; always stood out with his
+          assignments.
+        </p>
+        <div class="name-role">
+          <div>Jane Doe</div>
+          <div>Assistant Professor</div>
+        </div>
+      </div>
+      <div class="review p-3 border rounded">
+        <p>
+          John Doe was a brilliant student; always stood out with his
+          assignments.
+        </p>
+        <div class="name-role">
+          <div>Jane Doe</div>
+          <div>Assistant Professor</div>
+        </div>
+      </div>
+      <div class="review p-3 border rounded">
+        <p>
+          John Doe was a brilliant student; always stood out with his
+          assignments.
+        </p>
+        <div class="name-role">
+          <div>Jane Doe</div>
+          <div>Assistant Professor</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="container my-5">
+    <h3 class="text-center text-indie-flower">Contact Me</h3>
+    <form class="p-4 border rounded">
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" class="form-control" id="name" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Your Email</label>
+        <input type="email" class="form-control" id="email" required />
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center p-3 border-top text-indie-flower">
+    <p class="mb-0">&copy; 2025 Chihiro. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      const button = document.querySelector(".mode");
+      const nav = document.querySelector("nav");
+      const logo = document.querySelector(".nav-title");
+
+      body.classList.toggle("dark-mode");
+      nav.classList.toggle("dark-mode");
+      logo.classList.toggle("dark-mode");
+
+      button.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌑";
+    }
+  </script>
+</body>
+
+</html>

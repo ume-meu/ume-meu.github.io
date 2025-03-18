@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Schoolbell&display=swap");
+/* Light & Dark Mode Variables */
+:root {
+  --bg-light: #ffffff;
+  --text-light: #000000;
+  --bg-dark: #121212;
+  --text-dark: #ffffff;
+  --bg-nav-light: #f6f6f6;
+  --bg-nav-dark: #1f1f1f;
+  --scroll-light: #f0f0f0;
+  --scroll-bg-light: #eaeaea;
+  --scroll-dark: #222222;
+  --scroll-bg-dark: #323232;
+}
+
+html{
+  overflow-y: auto;
+}
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+/* Light Mode */
+body.light-mode {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  border: 2px solid var(--bg-nav-dark);
+}
+
+body.light-mode ::-webkit-scrollbar-track {
+  background-color: var(--scroll-light);
+}
+
+body.light-mode ::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-dark);
+  border-radius: 10px;
+}
+
+body.light-mode ::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-bg-dark);
+}
+
+body.light-mode .projects a{
+  color: var(--text-light);}
+
+nav.light-mode {
+  background-color: var(--bg-nav-light);
+  color: var(--text-light);
+}
+
+.light-mode .nav-link,
+.light-mode .nav-title {
+  color: var(--text-light) !important;
+}
+
+/* Dark Mode */
+body.dark-mode ::-webkit-scrollbar-track {
+  background-color: var(--scroll-dark); 
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-light);
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-bg-light);
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  border: 2px solid var(--bg-nav-light);
+}
+
+body.dark-mode .projects a{
+  color: var(--text-dark);}
+
+nav.dark-mode {
+  background-color: var(--bg-nav-dark);
+  color: var(--text-dark);
+}
+
+.dark-mode .nav-link,
+.dark-mode .nav-title {
+  color: var(--text-dark) !important;
+}
+
+.dark-mode .nav-link:hover {
+  color: #ddd !important;
+}
+
+.mode {
+  background: transparent;
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+
+body.dark-mode .mode {
+  color: var(--text-dark);
+}
+
+/* Normal Style */
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+.cursor-pointer {
+  display: flex;
+  cursor: pointer;
+}
+
+.text-indie-flower {
+  font-family: "Indie Flower", sans-serif;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrapper {
+  padding: 20px 20px;
+}
+
+.border-bottom {
+  padding: 10px 0;
+}
+
+.projects a {
+  text-decoration: none;
+}
+.projects a:hover {
+  text-decoration: underline;
+}
+
+.name-role {
+  color: #999;
+}
+
+
+@media (max-width: 600px) {
+  .mobile-navbar {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .logo-image {
+    width: 40px; /* Adjust the size of the logo */
+    height: 40px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .reviews-content {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .review {
+    flex: 0 0 80%;
+    max-width: 350px;
+    padding: 15px;
+    text-align: left;
+    scroll-snap-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .projects li{
+    background: var(--bg-nav-light);
+    text-align: center;
+  }
+  body.dark-mode .projects li{
+    background: var(--bg-nav-dark);
+  }
+}
